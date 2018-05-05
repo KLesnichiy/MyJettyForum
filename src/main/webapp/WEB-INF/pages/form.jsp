@@ -38,7 +38,8 @@
   </form:form>
 
 
-  <a href="list">see User List</a>
+  <a href="list">see User List</a><br>
+  <a href="login">вход</a>
  </center>
 </body>
 </html>

@@ -1,29 +1,43 @@
 package ru.myforum.model;
 
+
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
+
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "posts", catalog = "springhibernate_db")
-
 public class Posts {
-
     private int id;
     private String title;
     private String text;
-    private int date;
-    private User user;
+    private int created;
+    private Categories categories;
 
     public Posts() {
     }
 
-    public Posts(int id, String title, String text, int date) {
-        this.id = id;
+    public Posts(String title, String text) {
         this.title = title;
         this.text = text;
-        this.date = date;
+    }
+
+    public Posts(String title, String text, int created) {
+        this.title = title;
+        this.text = text;
+        this.created= created;
+    }
+
+    public Posts(String title, String text, Categories categories) {
+        this.title = title;
+        this.text = text;
+        this.categories = categories;
     }
 
     @Id
+    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     public int getId() {
         return id;
@@ -33,7 +47,7 @@ public class Posts {
         this.id = id;
     }
 
-    @Column(name = "title", nullable = false, length = 70)
+    @Column(name = "title")
     public String getTitle() {
         return title;
     }
@@ -42,7 +56,8 @@ public class Posts {
         this.title = title;
     }
 
-    @Column(name = "text", nullable = false)
+    @Column(name = "text" , length = 65535)
+    @Type(type="text")
     public String getText() {
         return text;
     }
@@ -51,28 +66,22 @@ public class Posts {
         this.text = text;
     }
 
-
-    @Column(name = "date", nullable = false)
-
-    public int getDate() {
-        return date;
+    @Column(name = "created")
+    public int getCreated() {
+        return created;
     }
 
-    public void setDate(int date) {
-        this.date = date;
+    public void setCreated(int created) {
+        this.created = created;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-
-    public User getUser() {
-        return user;
+    @JoinColumn(name = "categories_id")
+    public Categories getCategories() {
+        return categories;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setCategories(Categories categories) {
+        this.categories = categories;
     }
-
-
-
 }

@@ -1,5 +1,7 @@
 package ru.myforum.dao;
 
+import ru.myforum.model.Categories;
+import ru.myforum.model.Posts;
 import ru.myforum.model.User;
 
 import java.util.List;
@@ -14,7 +16,19 @@ public interface DataDao {
 
     public List<User> getList();
 
-    public User findByUserName(String username);
+    User findByUserName(String username);
+
+    public void insertRole(User user);
+
+    public Posts getPost(int id) ;
+
+    public List<Categories> listCategories( );
+
+    public List<Posts> getPostbyCategoria(int id);
+
+    public void insertPost(Posts post) ;
+
+    public Categories getCategories(int id );
 
 
 

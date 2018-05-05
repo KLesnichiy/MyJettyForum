@@ -3,9 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
                            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:component-scan base-package="ru.myforum"/>
     <context:property-placeholder location="classpath:/database.properties" />
@@ -30,6 +33,8 @@
             <list>
                 <value>ru.myforum.model.User</value>
                 <value>ru.myforum.model.UserRole</value>
+                <value>ru.myforum.model.Posts</value>
+                <value>ru.myforum.model.Categories</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -40,7 +45,7 @@
         </property>
     </bean>
 
-    <bean id="txManager"
+    <bean id="transactionManager"
           class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
@@ -55,5 +60,7 @@
 
     <bean id="dataDaoImpl" class="ru.myforum.dao.DataDaoImpl" />
     <bean id="dataServiceImpl" class="ru.myforum.services.DataServiceImpl" />
+    <tx:annotation-driven/>
+
 
 </beans>
