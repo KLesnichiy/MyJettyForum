@@ -61,6 +61,7 @@
             </tr>
 
 
+<<<<<<< HEAD
             <tr>
                 <td colspan =2><center><input type="submit" value="СОЗДАТЬ УЧЕТНУЮ ЗАПИСЬ" /></center></td>
             </tr>
@@ -82,5 +83,10 @@
   </form:form>
 
    </center>
+=======
+  <a href="list">see User List</a><br>
+  <a href="login">вход</a>
+ </center>
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 </body>
 </html>

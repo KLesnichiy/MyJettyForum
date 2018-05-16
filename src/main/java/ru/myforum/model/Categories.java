@@ -5,7 +5,11 @@ package ru.myforum.model;
         import java.util.HashSet;
         import java.util.Set;
 
+<<<<<<< HEAD
 
+=======
+        import static javax.persistence.GenerationType.IDENTITY;
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 
 @Entity
 @Table(name = "categories", catalog = "springhibernate_db")
@@ -21,7 +25,12 @@ public class Categories {
 
 
     @Id
+<<<<<<< HEAD
     @Column(name = "categories_id", unique = true, nullable = false)
+=======
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "idcategories", unique = true, nullable = false)
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
     public int getId() {
         return id;
     }

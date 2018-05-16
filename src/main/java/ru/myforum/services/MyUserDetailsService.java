@@ -35,8 +35,13 @@ public class MyUserDetailsService implements UserDetailsService {
 
     }
 
+<<<<<<< HEAD
 
 
+=======
+    // Converts com.mkyong.users.model.User user to
+    // org.springframework.security.core.userdetails.User
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
     private User buildUserForAuthentication(ru.myforum.model.User user, List<GrantedAuthority> authorities) {
         return new User(user.getUsername(), user.getPassword(), user.isEnabled(), true, true, true, authorities);
     }
@@ -45,6 +50,10 @@ public class MyUserDetailsService implements UserDetailsService {
 
         Set<GrantedAuthority> setAuths = new HashSet<GrantedAuthority>();
 
+<<<<<<< HEAD
+=======
+        // Build user's authorities
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
         for (UserRole userRole : userRoles) {
             setAuths.add(new SimpleGrantedAuthority(userRole.getRole()));
         }

@@ -35,7 +35,10 @@
                 <value>ru.myforum.model.UserRole</value>
                 <value>ru.myforum.model.Posts</value>
                 <value>ru.myforum.model.Categories</value>
+<<<<<<< HEAD
                 <value>ru.myforum.model.Coments</value>
+=======
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
             </list>
         </property>
         <property name="hibernateProperties">

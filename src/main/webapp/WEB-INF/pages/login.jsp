@@ -27,7 +27,11 @@
 }
 
 #login-box {
+<<<<<<< HEAD
 	width: 400px;
+=======
+	width: 300px;
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 	padding: 20px;
 	margin: 100px auto;
 	background: #fff;
@@ -37,20 +41,37 @@
 }
 </style>
 </head>
+<<<<<<< HEAD
 <body onload='document.loginForm.username.focus();' bgcolor="#e8e8e8">
 
 
 	<div id="login-box">
 
 		<h3>ВХОД</h3>
+=======
+<body onload='document.loginForm.username.focus();'>
+
+	<h1>Spring Security Login Form (Database + Hibernate Authentication)</h1>
+
+	<div id="login-box">
+
+		<h3>Login with Username and Password</h3>
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 
 		<c:if test="${not empty error}">
 			<div class="error">${error}</div>
 		</c:if>
+<<<<<<< HEAD
+=======
+		<c:if test="${not empty msg}">
+			<div class="msg">${msg}</div>
+		</c:if>
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 
 		<form name='loginForm'
 			action="<c:url value='/login' />" method='POST'>
 
+<<<<<<< HEAD
 			<table >
 				<tr>
 					<td>Имя пользователя</td>
@@ -58,10 +79,20 @@
 				</tr>
 				<tr>
 					<td>Пароль</td>
+=======
+			<table>
+				<tr>
+					<td>User:</td>
+					<td><input type='text' name='username'></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 					<td><input type='password' name='password' /></td>
 				</tr>
 				<tr>
 					<td colspan='2'><input name="submit" type="submit"
+<<<<<<< HEAD
 						value="вход" />
 					</td>
 				</tr>
@@ -70,6 +101,11 @@
 				      <a href="form">Создать учетную запись?</a>
 				      </td>
 				</tr>
+=======
+						value="submit" /></td>
+				</tr>
+				<tr><a href="form">регистрация</a><tr/>
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 			</table>
 
 			<input type="hidden" name="${_csrf.parameterName}"

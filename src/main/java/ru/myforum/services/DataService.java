@@ -1,7 +1,10 @@
 package ru.myforum.services;
 
 import ru.myforum.model.Categories;
+<<<<<<< HEAD
 import ru.myforum.model.Coments;
+=======
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 import ru.myforum.model.Posts;
 import ru.myforum.model.User;
 
@@ -26,6 +29,7 @@ public interface DataService {
 
     public void insertPost(Posts post) ;
 
+<<<<<<< HEAD
 
 
     public List<Coments> getComentsFromPost(int id);
@@ -33,5 +37,8 @@ public interface DataService {
     public void insertComent(Coments coment);
 
 
+=======
+    public Categories getCategories(int id );
+>>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 
 }
