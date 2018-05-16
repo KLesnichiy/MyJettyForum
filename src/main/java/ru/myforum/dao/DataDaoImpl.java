@@ -1,10 +1,6 @@
 package ru.myforum.dao;
 
-<<<<<<< HEAD
 
-=======
-import java.io.Serializable;
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -17,15 +13,8 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
-<<<<<<< HEAD
 import ru.myforum.model.*;
 
-=======
-import ru.myforum.model.Categories;
-import ru.myforum.model.User;
-import ru.myforum.model.UserRole;
-import ru.myforum.model.Posts;
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 /**
  * Created by Шмель on 14.12.2017.
  */
@@ -48,19 +37,12 @@ public class DataDaoImpl implements DataDao {
         session.close();
     }
 
-<<<<<<< HEAD
 
     public void insertPost(Posts post) {
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
         Date now = new Date();
         post.setCreated(now);
-=======
-    @Transactional
-    public void insertPost(Posts post) {
-        Session session = sessionFactory.openSession();
-        Transaction tx = session.beginTransaction();
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
         session.saveOrUpdate(post);
         tx.commit();
         session.close();
@@ -96,32 +78,13 @@ public class DataDaoImpl implements DataDao {
         return categories;
     }
 
-<<<<<<< HEAD
-=======
-    public Categories getCategories(int id ){
-        Session session = sessionFactory.openSession();
-        @SuppressWarnings("unchecked")
-        List<Categories> categor = session.createQuery("from Categories where idcategories=?").setParameter(0, id)
-                .list();
-        session.close();
-        if (categor.size() > 0) {
-            return categor.get(0);
-        } else {
-            return null;
-        }
-    }
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 
 
     @SuppressWarnings("unchecked")
     public Posts getPost(int id) {
         Session session = sessionFactory.openSession();
         List<Posts> posts = new ArrayList<Posts>();
-<<<<<<< HEAD
         posts = session.createQuery("from Posts where post_id=?").setParameter(0, id)
-=======
-        posts = session.createQuery("from Posts where id=?").setParameter(0, id)
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
                 .list();
         session.close();
         if (posts.size() > 0) {
@@ -145,7 +108,6 @@ public class DataDaoImpl implements DataDao {
         }
     }
 
-<<<<<<< HEAD
 
     @SuppressWarnings("unchecked")
     public List<Coments> getComentsFromPost(int id) {
@@ -171,8 +133,6 @@ public class DataDaoImpl implements DataDao {
         session.close();
     }
 
-=======
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
     @Transactional
     @SuppressWarnings("unchecked")
     public User findByUserName(String username) {

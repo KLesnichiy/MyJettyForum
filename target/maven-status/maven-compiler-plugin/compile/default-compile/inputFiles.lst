@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\services\DataServiceImpl.java
 F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\dao\DataDao.java
 F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\Coments.java
@@ -11,19 +10,3 @@ F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\controller\Security
 F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\Categories.java
 F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\User.java
 F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\controller\MainController.java
-=======
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\model\User.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\dao\DataDaoImpl.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\services\MyUserDetailsService.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\model\Posts.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\model\UserRole.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\model\Coments.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\controller\MainController.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\services\DataServiceImpl.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\dao\DataDao.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\services\DataService.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\controller\My.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\controller\SecurityController.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\model\Categories.java
-F:\Users\shmel\Desktop\MyJettyForum1\src\main\java\ru\myforum\model\Login.java
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0

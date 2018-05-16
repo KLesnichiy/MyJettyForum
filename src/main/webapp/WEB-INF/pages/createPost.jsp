@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Your name</title>
 </head>
-<<<<<<< HEAD
 <body bgcolor="#e8e8e8">
     <center>
         <div style="color: teal; font-size: 30px">Создать новую тему</div>
@@ -37,39 +36,5 @@
         </form:form>
         <a href="posts?id=${categoria}">назад</a>
     </center>
-=======
-<body>
- <center>
-
-  <div style="color: teal; font-size: 30px">Создать новую тему</div>
-
-
-
- <form:form id="criateForm" modelAttribute="posts" method="post"
-   action="createPost">
-   <table width="800px" height="600px">
-    <tr>
-     <td><form:label path="title">Выберите раздел Заголовока</form:label>
-     </td>
-     <td><form:input path="title" />
-     </td>
-    </tr>
-    <tr>
-     <td><form:label path="text">Сообщение</form:label>
-     </td>
-     <td><form:input path="text" />
-     </td>
-    </tr>
-    <tr>
-     <td></td>
-     <td><input type="submit" value="Отправить" /></td>
-    </tr>
-   </table>
-  </form:form>
-
-
-  <a href="PostsList">назад</a>
- </center>
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 </body>
 </html>

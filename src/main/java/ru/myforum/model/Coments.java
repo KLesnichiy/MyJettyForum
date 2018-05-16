@@ -1,6 +1,5 @@
 package ru.myforum.model;
 
-<<<<<<< HEAD
 
 import org.hibernate.annotations.Type;
 
@@ -77,7 +76,4 @@ public class Coments {
     public void setUser(User user) {
         this.user = user;
     }
-=======
-public class Coments {
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 }

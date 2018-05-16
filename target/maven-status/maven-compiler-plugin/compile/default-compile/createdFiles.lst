@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ru\myforum\dao\DataDaoImpl.class
 ru\myforum\controller\SecurityController.class
 ru\myforum\model\User.class
@@ -10,18 +9,4 @@ ru\myforum\model\Coments.class
 ru\myforum\services\MyUserDetailsService.class
 ru\myforum\services\DataService.class
 ru\myforum\services\DataServiceImpl.class
-=======
-ru\myforum\controller\SecurityController.class
-ru\myforum\controller\MainController.class
-ru\myforum\model\Login.class
-ru\myforum\services\DataService.class
-ru\myforum\services\DataServiceImpl.class
-ru\myforum\dao\DataDaoImpl.class
-ru\myforum\model\User.class
-ru\myforum\model\Categories.class
-ru\myforum\model\Posts.class
-ru\myforum\model\UserRole.class
-ru\myforum\model\Coments.class
-ru\myforum\services\MyUserDetailsService.class
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 ru\myforum\dao\DataDao.class

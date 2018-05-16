@@ -7,7 +7,6 @@
        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
        <title>форумы</title>
 </head>
-<<<<<<< HEAD
 <body bgcolor="#e8e8e8" link="#222222" alink="#222222" vlink="#222222" >
 
 
@@ -46,17 +45,5 @@
             </c:if>
         </font>
     </center>
-=======
-<body bgcolor="#e8e8e8" >
-<font face="Monotype Corsiva" size="6"color="#ff0000">Форумы:</font><br>
-<font face="Comic Sans MS" size="3">
-       <c:if test="${!empty listCategories}">
-           <c:forEach items="${listCategories}" var="categor">
-       		<a href="posts?id=${categor.id}">"${categor.title}"</a><br>
-       		<font size="-1">"${categor.description}"</font><br><br>
-           </c:forEach>
-       </c:if>
-</font>
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
 </body>
 </html>

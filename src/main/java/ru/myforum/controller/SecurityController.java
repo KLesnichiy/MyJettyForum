@@ -36,11 +36,7 @@ public class SecurityController extends WebSecurityConfigurerAdapter {
                 .loginPage("/login").failureUrl("/login?error")
                 .usernameParameter("username")
                 .passwordParameter("password")
-<<<<<<< HEAD
                 .and().logout().logoutSuccessUrl("/categories?logout")
-=======
-                .and().logout().logoutSuccessUrl("/login?logout")
->>>>>>> 99ef70e01dc335e6bee1190972dd01ceacaf92d0
                 .and().csrf()
                 .and().exceptionHandling().accessDeniedPage("/403");
     }
