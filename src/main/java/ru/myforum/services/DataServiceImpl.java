@@ -2,6 +2,9 @@ package ru.myforum.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.myforum.dao.DataDao;
+import ru.myforum.model.Categories;
+import ru.myforum.model.Coments;
+import ru.myforum.model.Posts;
 import ru.myforum.model.User;
 
 import java.util.List;
@@ -24,7 +27,27 @@ public class DataServiceImpl implements DataService {
         return dataDao.getList();
     }
 
+
     public User findByUserName(String username) {
         return dataDao.findByUserName(username);
     }
+
+
+    public void insertRole(User user) { dataDao.insertRole(user); }
+
+    public Posts getPost(int id) {return dataDao.getPost(id);}
+
+    public List<Categories> listCategories(){return dataDao.listCategories(); }
+
+    public List<Posts> getPostbyCategoria(int id){return dataDao.getPostbyCategoria(id);}
+
+    public void insertPost(Posts post){dataDao.insertPost(post);}
+
+    public List<Coments> getComentsFromPost(int id){return dataDao.getComentsFromPost(id);}
+
+    public void insertComent(Coments coment){dataDao.insertComent(coment);}
+
+
+
+
 }

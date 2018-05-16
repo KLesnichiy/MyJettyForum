@@ -1,8 +1,7 @@
 package ru.myforum.model;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "users", catalog = "springhibernate_db")
@@ -11,6 +10,10 @@ public class User {
 	private String username;
 	private String password;
 	private boolean enabled;
+	private String mail;
+	private String gender;
+	private Date birthday;
+
 	private Set<UserRole> userRole = new HashSet<UserRole>(0);
 
 	public User() {
@@ -57,6 +60,33 @@ public class User {
 		this.enabled = enabled;
 	}
 
+	@Column(name = "email")
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+	@Column(name = "gender")
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	@Column(name = "birthday")
+	@Temporal(TemporalType.DATE)
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 	public Set<UserRole> getUserRole() {
 		return this.userRole;
@@ -65,5 +95,4 @@ public class User {
 	public void setUserRole(Set<UserRole> userRole) {
 		this.userRole = userRole;
 	}
-
 }

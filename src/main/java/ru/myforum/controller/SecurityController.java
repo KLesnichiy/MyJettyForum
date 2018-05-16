@@ -2,12 +2,15 @@ package ru.myforum.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * Created by Шмель on 06.03.2018.
@@ -16,25 +19,32 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 @EnableWebSecurity
 public class SecurityController extends WebSecurityConfigurerAdapter {
 
-   // @Autowired
-    //@Qualifier("userDetailsService")
-    //UserDetailsService userDetailsService;
+    @Autowired
+    @Qualifier("userDetailsService")
+    UserDetailsService userDetailsService;
 
     @Autowired
-    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("user").password("abc123").roles("USER");
-        auth.inMemoryAuthentication().withUser("admin").password("root123").roles("ADMIN");
-        //auth.userDetailsService(userDetailsService);
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.authorizeRequests()
-                //.antMatchers("/", "form").permitAll()
-                .antMatchers("/", "form","register","list").access("hasRole('ADMIN')")
-                .and().formLogin()
-                .and().exceptionHandling().accessDeniedPage("/Access_Denied");
-
+        http.authorizeRequests().antMatchers("/admin/**")
+                .access("hasRole('ROLE_ADMIN')").and().formLogin()
+                .loginPage("/login").failureUrl("/login?error")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .and().logout().logoutSuccessUrl("/categories?logout")
+                .and().csrf()
+                .and().exceptionHandling().accessDeniedPage("/403");
     }
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        return encoder;
+    }
+
 }

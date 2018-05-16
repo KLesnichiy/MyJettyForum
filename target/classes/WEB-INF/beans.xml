@@ -33,9 +33,6 @@
             <list>
                 <value>ru.myforum.model.User</value>
                 <value>ru.myforum.model.UserRole</value>
-                <value>ru.myforum.model.Posts</value>
-                <value>ru.myforum.model.Categories</value>
-                <value>ru.myforum.model.Coments</value>
             </list>
         </property>
         <property name="hibernateProperties">

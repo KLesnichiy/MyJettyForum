@@ -1,30 +1,52 @@
 package ru.myforum.model;
 
+
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+
 
 @Entity
 @Table(name = "posts", catalog = "springhibernate_db")
-
 public class Posts {
-
     private int id;
     private String title;
     private String text;
-    private int date;
+    private Date created;
+    private Categories categories;
     private User user;
+    private Set<Coments> coments = new HashSet<Coments>(0);
+
 
     public Posts() {
     }
 
-    public Posts(int id, String title, String text, int date) {
+    public Posts(String title, String text) {
+        this.title = title;
+        this.text = text;
+    }
+
+    public Posts(String title, String text, Date created) {
+        this.title = title;
+        this.text = text;
+        this.created= created;
+    }
+
+    public Posts(int id,String title, String text, Categories categories) {
         this.id = id;
         this.title = title;
         this.text = text;
-        this.date = date;
+        this.categories = categories;
     }
 
     @Id
-    @Column(name = "id", unique = true, nullable = false)
+    @GeneratedValue
+    @Column(name = "post_id", unique = true)
     public int getId() {
         return id;
     }
@@ -33,7 +55,7 @@ public class Posts {
         this.id = id;
     }
 
-    @Column(name = "title", nullable = false, length = 70)
+    @Column(name = "title")
     public String getTitle() {
         return title;
     }
@@ -42,7 +64,8 @@ public class Posts {
         this.title = title;
     }
 
-    @Column(name = "text", nullable = false)
+    @Column(name = "text" , length = 65535)
+    @Type(type="text")
     public String getText() {
         return text;
     }
@@ -51,20 +74,38 @@ public class Posts {
         this.text = text;
     }
 
-
-    @Column(name = "date", nullable = false)
-
-    public int getDate() {
-        return date;
+    @Column(name = "created")
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date getCreated() {
+        return created;
     }
 
-    public void setDate(int date) {
-        this.date = date;
+    public void setCreated(Date created) {
+        this.created = created;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "categories_id", nullable = false)
+    public Categories getCategories() {
+        return categories;
+    }
 
+
+    public void setCategories(Categories categories) {
+        this.categories = categories;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "posts")
+    public Set<Coments> getComents() {
+        return coments;
+    }
+
+    public void setComents(Set<Coments> coments) {
+        this.coments = coments;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_name", nullable = false)
     public User getUser() {
         return user;
     }
@@ -72,7 +113,4 @@ public class Posts {
     public void setUser(User user) {
         this.user = user;
     }
-
-
-
 }

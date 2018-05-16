@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="MyJettyForum" target="1.6" />
+      <module name="MyJettyForum" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>

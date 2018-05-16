@@ -10,8 +10,8 @@
 <body>
  <center>
 
-  <div style="color: teal; font-size: 30px">Пользователи
-List</div>
+  <div style="color: teal; font-size: 30px">User
+   List</div>
 
   <c:if test="${!empty userList}">
    <table border="1" bgcolor="black" width="600px">
@@ -39,7 +39,7 @@ List</div>
   </c:if>
 
 
-  <a href="form">добавить нового Пользователя</a>
+  <a href="form">add new User</a>
  </center>
 </body>
 </html>

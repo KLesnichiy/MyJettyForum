@@ -1,10 +1,12 @@
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\controller\SecurityController.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\model\User.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\model\Login.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\dao\DataDaoImpl.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\controller\MainController.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\dao\DataDao.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\MyUserDetailsService.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\model\UserRole.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\services\DataServiceImpl.java
-C:\Users\fonza\Desktop\с wd\Костя\MyJettyForum\src\main\java\ru\myforum\services\DataService.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\services\DataServiceImpl.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\dao\DataDao.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\Coments.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\services\MyUserDetailsService.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\dao\DataDaoImpl.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\services\DataService.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\Posts.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\UserRole.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\controller\SecurityController.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\Categories.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\model\User.java
+F:\Users\shmel\Desktop\MyJettyForum\src\main\java\ru\myforum\controller\MainController.java
